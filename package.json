@@ -1,0 +1,11 @@
+{
+  "name": "sidenav",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:santhoshbalakrishnan/sidenav.git",
+  "author": "Santhosh Kumar Bala Krishnan <santhosh.balakrishnan@okta.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
