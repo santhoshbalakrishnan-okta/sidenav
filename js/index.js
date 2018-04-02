@@ -71,12 +71,12 @@ $(function(){
 		el: $('body'),
 
 		events: {
-			'click .sidenav .dashboard': 'displayDashboard',
-			'click .sidenav .directory': 'displayDirectory',
-			'click .sidenav .applications': 'displayApplications',
-			'click .sidenav .security': 'displaySecurity',
-			'click .sidenav .reports': 'displayReports',
-			'click .sidenav .settings': 'displaySettings'
+			'click .sidenav .dashboard > a': 'displayDashboard',
+			'click .sidenav .directory > a': 'displayDirectory',
+			'click .sidenav .applications > a': 'displayApplications',
+			'click .sidenav .security > a': 'displaySecurity',
+			'click .sidenav .reports > a': 'displayReports',
+			'click .sidenav .settings > a': 'displaySettings'
 		},
 
 		initialize: function(){

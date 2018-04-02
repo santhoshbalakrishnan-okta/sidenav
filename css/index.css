@@ -1,15 +1,15 @@
 * {
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     height: 100vh;
-    box-sizing: border-box;
 }
 
 nav {
-    width: 15%;
+    width: 20%;
     height: 100%;
     float: left;
     background: #022032;
@@ -18,28 +18,82 @@ nav {
 nav .logo {
     margin-top: 30px;
     margin-left: 20px;
-    width: 40%;
     margin-bottom: 20px;
+    width: 30%;
 }
 
 nav li {
     list-style: none;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
 
-nav a {
+nav .parent-links li a {
     color: #FFF;
     font-size: 14px;
-    /* text-transform: uppercase; */
+}
+
+nav .parent-links > li > a{
+    /* font-size: 14px; */
+    text-transform: uppercase;
+}
+
+nav .child-links {
+    padding-top: 20px;
+    padding-left: 10px;
+    display: none;
+}
+
+nav .child-links li a {
+    color: #637F8F;
+    margin-left: 20px;
+}
+
+nav .child-links li {
+    border-left: 2px solid #183E54;
+}
+
+nav .child-links li:hover{
+    border-left: 2px solid #54AB99;
+}
+
+nav .child-links li:hover a{
+    color: #FFF;
+}
+
+nav .parent-links li:hover .child-links {
+    display: block;
+    animation: slideDown 0.3s;
+}
+
+nav .icon {
+    width: 25px;
+    margin-right: 5px;
+    position: relative;
+    top: 7px; 
 }
 
 main {
-    width: 85%;
+    width: 80%;
     height: 100%;
+    float: left;
+    padding-top: 0px;
 }
 
 iframe.router-outlet {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+@keyframes slideDown {
+	0% {
+        transform: translateY(-5px);
+        opacity: 0;
+	}			
+	100% {
+        transform: translateY(0%);
+        opacity: 1;
+	}		
 }
